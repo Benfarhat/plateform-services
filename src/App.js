@@ -1,40 +1,20 @@
-import React, { Fragment, Component } from 'react';
-import { Header, Sidebar, Main } from './components/layouts'
-import { domaines } from './data/data'
+import React, { Component } from 'react';
+import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Login from './components/auth/Login';
 
 class App extends Component {
-    state = {
-        langue: 'fr',
-        fr: {
-            application: {
-                title: "Site des Services"
-            }
-        },
-        ar: {
-            application: {
-                title: "موقع الخدمات"
-            }
-        },
-        domaines: {}
-    }
-    
-    componentDidMount(){
-        
-        this.setState({
-            domaines: domaines
-        })
-    }
-    render() {
-
-        console.log(this.state.domaines)
-        return (
-            <div dir={(this.state.langue === 'ar') ? 'rtl' : 'ltr'}>
-                <Header application={this.state[this.state.langue].application} />
-                <Sidebar domaines={this.state.domaines} langue={this.state.langue}/>
-                <Main />
-            </div>
-        );
-    }
+  render() {
+    return (
+      <Router>
+        <div>
+          <Route exact path="/" component={Home} />
+          <Route path="/login" component={Login} />
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
