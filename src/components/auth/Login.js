@@ -16,7 +16,7 @@ export default class Login extends Component {
                         <h3 className="login-head"><i className="fa fa-lg fa-fw fa-user"></i>CONNEXION</h3>
                         <div className="form-group">
                             <label className="control-label">IDENTIFIANT</label>
-                            <input className="form-control" type="text" placeholder="Email" autofocus />
+                            <input className="form-control" type="text" placeholder="Email" autoFocus />
                         </div>
                         <div className="form-group">
                             <label className="control-label">MOT DE PASSE</label>

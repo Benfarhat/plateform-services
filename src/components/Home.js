@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from 'react';
+import React, { Component } from 'react';
 import { Header, Sidebar, Main } from './layouts'
 import { domaines } from '../data/data'
 
@@ -7,12 +7,14 @@ class Home extends Component {
         langue: 'fr',
         fr: {
             application: {
-                title: "Site des Services"
+                title: "Site des Services",
+                search: "Recherche"
             }
         },
         ar: {
             application: {
-                title: "موقع الخدمات"
+                title: "موقع الخدمات",
+                search: "بحث"
             }
         },
         domaines: {}
