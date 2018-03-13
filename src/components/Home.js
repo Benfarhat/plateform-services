@@ -18,12 +18,13 @@ class Home extends Component {
         domaines: {}
     }
     
-    componentDidMount(){
+    componentWillMount(){
         
         this.setState({
             domaines: domaines
         })
     }
+
     render() {
 
         console.log(this.state.domaines)

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 class Sidebar extends Component {
-    getDomaines = () => { return Object.values(this.props.domaines) }
-
+    //getDomaines = () => Object.values(this.props.domaines)
+    getDomaines = () => this.props.domaines
 
     render(props) {
         /*
@@ -30,12 +30,12 @@ class Sidebar extends Component {
               </div>
             </div>
             <ul className="app-menu">
-              <li><a className="app-menu__item active" href="index.html"><i className="app-menu__icon fa fa-dashboard"></i><span className="app-menu__label">Dashboard</span></a></li>
+              <li><a className="app-menu__item active" href="/"><i className="app-menu__icon fa fa-dashboard"></i><span className="app-menu__label">Dashboard</span></a></li>
 
             {this.getDomaines().map(domaine => {
                 console.log(this.props.langue)
                 return (
-              <li><a className="app-menu__item" href="charts.html"><i className="app-menu__icon fa fa-pie-chart"></i><span className="app-menu__label">{domaine[this.props.langue].name}</span></a></li>
+              <li><a className="app-menu__item" href="#"><i className="app-menu__icon fa fa-dashboard"></i><span className="app-menu__label">{domaine[this.props.langue].name}</span></a></li>
               )}
             )}
 

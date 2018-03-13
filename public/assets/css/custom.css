@@ -2,3 +2,6 @@ body{
     font-size: 1.4em;
     line-height: 1.7em
 }
+.red-bg{
+    background: url('../images/bg.jpg') 
+}
