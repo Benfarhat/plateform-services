@@ -36,6 +36,7 @@ class App extends Component {
           <Redirect from="/abcd" to="/"/>
           <Route path="/login" component={Login} />
           <AuthRoute path="/admin" component={Admin} />
+          <Route component={Home}/>
         </Switch>
       </Router>
     );
@@ -52,7 +53,6 @@ class App extends Component {
 //           <Redirect from="/abcd" to="/"/>
 //           <Route path="/login" component={Login} />
 //           <AuthRoute path="/admin" component={Admin} />
-//           <Route component={Home}/>
 //         </Switch>
 //       </Router>
 //     );

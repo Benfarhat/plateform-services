@@ -3,28 +3,29 @@ import { Header, Sidebar, Main } from './layouts'
 import { domaines } from '../data/data'
 
 class Home extends Component {
-    state = {
-        langue: 'fr',
-        fr: {
-            application: {
-                title: "Site des Services",
-                search: "Recherche"
-            }
-        },
-        ar: {
-            application: {
-                title: "موقع الخدمات",
-                search: "بحث"
-            }
-        },
-        domaines: {}
+    constructor(props){
+        super(props)
+        
+        this.state = {
+            langue: 'fr',
+            fr: {
+                application: {
+                    title: "Site des Services",
+                    search: "Recherche"
+                }
+            },
+            ar: {
+                application: {
+                    title: "موقع الخدمات",
+                    search: "بحث"
+                }
+            },
+            domaines: domaines
+        }
     }
     
     componentWillMount(){
-        
-        this.setState({
-            domaines: domaines
-        })
+
     }
 
     render() {
