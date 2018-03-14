@@ -25,7 +25,7 @@ class Home extends Component {
     }
     
     componentWillMount(){
-
+        // console.log(store)
     }
 
     render() {
