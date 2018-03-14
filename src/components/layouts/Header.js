@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Header extends Component {
     render(props) {
@@ -61,5 +62,16 @@ class Header extends Component {
         );
     }
 }
+
+Header.propTypes = {
+  application: PropTypes.object.isRequired
+};
+
+Header.defaultProps = {
+  application: {
+    title: 'title',
+    search: 'search'
+  }
+};
 
 export default Header;

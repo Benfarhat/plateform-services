@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DomainItem from './DomainItem'
+import SidebarItem from './SidebarItem'
 
 class Sidebar extends Component {
     getDomaines = () => this.props.domaines
@@ -21,7 +21,7 @@ class Sidebar extends Component {
             {this.getDomaines().map((domaine, i) => {
                 console.log(this.props.langue)
                 return (
-                  <DomainItem key={i} title={domaine[this.props.langue].name} />
+                  <SidebarItem key={i} title={domaine[this.props.langue].name} />
               )}
             )}
 
