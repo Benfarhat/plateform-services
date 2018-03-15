@@ -1,9 +1,26 @@
 
-import { SWITCH_LANGUAGE, TEST }  from './actions' // Actions types
-import { switchLanguage, test }  from './actions' // Actions (function)
+import { GET_DOMAINS, SWITCH_LANGUAGE, TEST }  from './actions' // Actions types
+import { getDomains, switchLanguage, test }  from './actions' // Actions (function)
+import { domaines } from '../data/data'
 
-const availableLanguage = ['fr', 'ar']
-const reducer = (state = [], action) => {
+const initialState = {
+  langue: 'fr',
+  fr: {
+      application: {
+          title: "Site des Services",
+          search: "Recherche"
+      }
+  },
+  ar: {
+      application: {
+          title: "موقع الخدمات",
+          search: "بحث"
+      }
+  },
+  domaines: domaines
+}
+
+const reducer = (state = initialState, action) => {
     switch (action.type) {
       case 'SWITCH_LANGUAGE':
         

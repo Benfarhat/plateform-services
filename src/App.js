@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch, Redirect  } from 'react-router-dom'
 import decode from 'jwt-decode'
 
-import Home from './components/Home'
+import Container from './redux/container/container'
 import Login from './components/auth/Login'
 import Admin from './components/admin/admin'
 import './App.css'
@@ -32,11 +32,11 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Container} />
           <Redirect from="/abcd" to="/"/>
           <Route path="/login" component={Login} />
           <AuthRoute path="/admin" component={Admin} />
-          <Route component={Home}/>
+          <Route component={Container}/>
         </Switch>
       </Router>
     );

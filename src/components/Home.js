@@ -1,44 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import store from '../index'
+
 import { Header, Sidebar, Main } from './layouts'
-import { domaines } from '../data/data'
-
-class Home extends Component {
-    constructor(props){
-        super(props)
-        
-        this.state = {
-            langue: 'fr',
-            fr: {
-                application: {
-                    title: "Site des Services",
-                    search: "Recherche"
-                }
-            },
-            ar: {
-                application: {
-                    title: "موقع الخدمات",
-                    search: "بحث"
-                }
-            },
-            domaines: domaines
-        }
-    }
-    
-    componentWillMount(){
-        // console.log(store)
-    }
-
+export default class Home extends Component {
     render() {
-
-        console.log(this.state.domaines)
+        console.log("state2 - " ,     store.getState())
+        console.log("props2 - " , this.props)
         return (
-            <div dir={(this.state.langue === 'ar') ? 'rtl' : 'ltr'}>
-                <Header application={this.state[this.state.langue].application} />
-                <Sidebar domaines={this.state.domaines} langue={this.state.langue}/>
-                <Main />
+            <div>
             </div>
-        );
+        )
     }
 }
 
-export default Home;
+/*            <div dir={(this.state.langue === 'ar') ? 'rtl' : 'ltr'}>
+                <Header application={{test:"test"}} />
+                <Sidebar domaines={this.state.domaines} langue="fr"/>
+                <Main />
+            </div>*/
